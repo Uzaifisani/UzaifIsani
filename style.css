@@ -6,14 +6,14 @@
 }
 
 :root {
-    --primary-color: #000000;
-    --secondary-color: #333333;
-    --accent-color: #666666;
+    --primary-color: #1a1a2e;
+    --secondary-color: #4a90e2;
+    --accent-color: #61dafb;
     --text-color: #333;
     --background-color: #f8f9fa;
     --card-bg: #ffffff;
-    --gradient-start: #000000;
-    --gradient-end: #333333;
+    --gradient-start: #1a1a2e;
+    --gradient-end: #4a90e2;
 }
 
 html {
@@ -36,8 +36,7 @@ body {
 nav {
     position: fixed;
     width: 100%;
-    background: var(--background-color);
-    backdrop-filter: blur(10px);
+    background-color: white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
@@ -101,12 +100,12 @@ section {
     align-items: center;
     background: linear-gradient(
         135deg, 
-        #000000 0%,
-        #333333 100%
+        #1a237e 0%,
+        #1565c0 100%
     );
     position: relative;
     overflow: hidden;
-    padding: 100px 0;
+    padding: 60px 0;
 }
 
 .container {
@@ -159,12 +158,10 @@ section {
 }
 
 .contact-info i {
-    color: #ff0000;
-    margin-right: 10px;
-}
-
-.contact-info a:hover i {
-    color: #cc0000;
+    font-size: 1.2rem;
+    color: #81d4fa;
+    width: 24px;
+    text-align: center;
 }
 
 .contact-info a {
@@ -230,13 +227,12 @@ section {
 
 .skill-category {
     background: var(--card-bg);
-    border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 2rem;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     position: relative;
     overflow: hidden;
-    transition: transform 0.3s ease;
 }
 
 .skill-category::before {
@@ -268,10 +264,6 @@ section {
     color: var(--secondary-color);
 }
 
-.skill-category:hover {
-    transform: none;
-}
-
 /* Projects Section */
 .project-cards {
     display: grid;
@@ -282,10 +274,10 @@ section {
 
 .project-card {
     background: var(--card-bg);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
     padding: 2rem;
     border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -366,7 +358,7 @@ section {
 
 /* Footer */
 footer {
-    background: var(--primary-color);
+    background-color: var(--primary-color);
     color: white;
     padding: 2rem 0;
     text-align: center;
@@ -473,12 +465,6 @@ footer {
     .shape {
         display: none; /* Hide floating shapes on mobile for better performance */
     }
-
-    /* Profile Image Styles */
-    .profile-image {
-        width: 150px;
-        height: 150px;
-    }
 }
 
 /* Small phones */
@@ -523,12 +509,6 @@ footer {
 
     .contact-info {
         padding: 0.8rem;
-    }
-
-    /* Profile Image Styles */
-    .profile-image {
-        width: 120px;
-        height: 120px;
     }
 }
 
@@ -606,27 +586,4 @@ footer {
 /* Skills section adjustments */
 #skills {
     padding-top: 40px;
-}
-
-/* Profile Image Styles */
-.profile-container {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.profile-image {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 4px solid rgba(255, 255, 255, 0.2);
-    object-fit: cover;
-    margin: 0 auto 2rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    animation: fadeInDown 1s ease-out;
-}
-
-/* Gradient for section headers */
-section h2 {
-    color: var(--text-color);
-    margin-bottom: 2rem;
 }
